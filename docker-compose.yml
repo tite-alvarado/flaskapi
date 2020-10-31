@@ -1,10 +1,10 @@
 # swarm-compatible
 version: "3.8"
 services:
-  api:
+  flaskapp:
     build: .
     image: flaskapp
-    container_name: flaskapp
+    # container_name: flaskapp
     ports:
       - 5000:5000
     deploy:
