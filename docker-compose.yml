@@ -1,0 +1,25 @@
+# swarm-compatible
+version: "3.8"
+services:
+  api:
+    build: .
+    image: flaskapp
+    container_name: flaskapp
+    ports:
+      - 5000:5000
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD","sh","tests.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  internal:
+
