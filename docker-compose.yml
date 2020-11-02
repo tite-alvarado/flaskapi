@@ -2,7 +2,7 @@
 version: "3.8"
 services:
   flaskapp:
-    build: .
+    build: docker
     image: flaskapp
     # container_name: flaskapp
     ports:

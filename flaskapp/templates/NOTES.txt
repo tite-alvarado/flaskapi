@@ -1,0 +1,6 @@
+Flaskapp codec
+
+Endpoints:
+* /health - GET
+* /encrypt - POST, Input: text, Output: coded
+* /decrypt - POST, Input: text, Output: cleartext
